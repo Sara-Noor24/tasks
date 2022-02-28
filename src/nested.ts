@@ -1,5 +1,3 @@
-import { urlToHttpOptions } from "url";
-import { isQuestion } from "./functions";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -21,13 +19,13 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    const nonempty = questions.filter(
+    const nonemptys = questions.filter(
         (question: Question): boolean =>
             question.body.length !== 0 ||
             question.expected.length !== 0 ||
             question.options.length !== 0
     );
-    return nonempty;
+    return nonemptys;
 }
 
 /***
