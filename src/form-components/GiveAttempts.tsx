@@ -7,18 +7,18 @@ type ChangeEvent = React.ChangeEvent<
 
 export function GiveAttempts(): JSX.Element {
     const [attempts, setAttempts] = useState<number>(3);
-    const [reqattempts, setReqattempts] = useState<number>(0);
+    const [reqattempts, setReqattempts] = useState<string>("");
 
     function useanAttempt() {
         const newattempts = attempts - 1;
         setAttempts(newattempts);
     }
     function addAttempts() {
-        let newattempts = 0;
-        if (isNaN(reqattempts)) {
+        let newattempts: number;
+        if (isNaN(parseInt(reqattempts))) {
             newattempts = attempts;
         } else {
-            newattempts = attempts + reqattempts;
+            newattempts = attempts + parseInt(reqattempts);
         }
         setAttempts(newattempts);
     }
@@ -32,7 +32,7 @@ export function GiveAttempts(): JSX.Element {
                     type="number"
                     value={reqattempts}
                     onChange={(event: ChangeEvent) =>
-                        setReqattempts(parseInt(event.target.value))
+                        setReqattempts(event.target.value)
                     }
                 />
             </Form.Group>
