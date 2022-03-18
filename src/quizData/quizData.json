@@ -1,0 +1,78 @@
+[
+    {
+        "title": "Quiz 1",
+        "description": "A multiple choice quiz about math",
+        "totalPoints": 0,
+        "numOfQuestions": 3,
+        "questions": [
+            {
+                "id": 1,
+                "name": "Question 1",
+                "body": "Solve: 2+2 = ?",
+                "type": "multiple_choice_question",
+                "options": ["2", "7", "4", "12"],
+                "expected": "4",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 2,
+                "name": "Question 2",
+                "body": "Solve: 2+10 = ?",
+                "type": "multiple_choice_question",
+                "options": ["20", "8", "4", "12"],
+                "expected": "12",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 3,
+                "name": "Question 3",
+                "body": "Solve: 15-5 = ?",
+                "type": "multiple_choice_question",
+                "options": ["20", "10", "4", "12"],
+                "expected": "4",
+                "points": 1,
+                "published": true
+            }
+        ]
+    },
+    {
+        "title": "Quiz 2",
+        "description": "A short answer quiz about English",
+        "totalPoints": 0,
+        "numOfQuestions": 3,
+        "questions": [
+            {
+                "id": 1,
+                "name": "Question 1",
+                "body": "How many vowels are their (including y)?",
+                "type": "short_answer_question",
+                "options": [""],
+                "expected": "6",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 2,
+                "name": "Question 2",
+                "body": "Solve: 2+10 = ?",
+                "type": "short_answer_question",
+                "options": [""],
+                "expected": "12",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 3,
+                "name": "Question 3",
+                "body": "What goes at the end of a questions?",
+                "type": "short_answer_question",
+                "options": [""],
+                "expected": "Question Mark",
+                "points": 1,
+                "published": true
+            }
+        ]
+    }
+]
