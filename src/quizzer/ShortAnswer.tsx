@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import { Form, Stack } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 type ChangeEvent = React.ChangeEvent<
     HTMLTextAreaElement | HTMLInputElement | HTMLSelectElement
 >;
 
-export function ShortAnswer({
-    expectedAnswer
-}: {
-    expectedAnswer: string;
+export function ShortAnswer(questionOptions: {
+    options: string[];
+    expected: string;
+    points: number;
 }): JSX.Element {
+    const Defult_Answer = questionOptions.options[0];
     const [answer, setAnswer] = useState<string>("");
 
     function updateAnswer(event: ChangeEvent) {
         setAnswer(event.target.value);
+    }
+    function clearAnswer() {
+        setAnswer(Defult_Answer);
     }
     return (
         <div>
@@ -24,13 +28,16 @@ export function ShortAnswer({
                     </Form.Group>
                 </div>
                 <div>
-                    {answer === expectedAnswer ? (
+                    {answer === questionOptions.expected ? (
                         <span>✔️</span>
                     ) : (
                         <span>❌</span>
                     )}
                 </div>
             </Stack>
+            <div>
+                <Button onClick={clearAnswer}>ClearAnswer</Button>
+            </div>
         </div>
     );
 }

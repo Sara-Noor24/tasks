@@ -31,7 +31,7 @@
                 "body": "Solve: 15-5 = ?",
                 "type": "multiple_choice_question",
                 "options": ["20", "10", "4", "12"],
-                "expected": "4",
+                "expected": "10",
                 "points": 1,
                 "published": true
             }
@@ -41,14 +41,14 @@
         "title": "Quiz 2",
         "description": "A short answer quiz about English",
         "totalPoints": 0,
-        "numOfQuestions": 3,
+        "numOfQuestions": 4,
         "questions": [
             {
                 "id": 1,
                 "name": "Question 1",
                 "body": "How many vowels are their (including y)?",
-                "type": "short_answer_question",
-                "options": [""],
+                "type": "multiple_choice_question",
+                "options": ["1", "2", "6", "4"],
                 "expected": "6",
                 "points": 1,
                 "published": true
@@ -70,6 +70,16 @@
                 "type": "short_answer_question",
                 "options": [""],
                 "expected": "Question Mark",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 4,
+                "name": "Question 4",
+                "body": "Is english the best subject?",
+                "type": "short_answer_question",
+                "options": [""],
+                "expected": "No",
                 "points": 1,
                 "published": true
             }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Stack } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 
 export function MulipleChoice(questionOptions: {
     options: string[];
@@ -11,6 +11,10 @@ export function MulipleChoice(questionOptions: {
 
     function updateGivenAnswer(event: React.ChangeEvent<HTMLSelectElement>) {
         setGivenAnswer(event.target.value);
+    }
+
+    function clearAnswer() {
+        setGivenAnswer(Defult_Answer);
     }
     return (
         <div>
@@ -36,6 +40,9 @@ export function MulipleChoice(questionOptions: {
                     )}
                 </div>
             </Stack>
+            <div>
+                <Button onClick={clearAnswer}>ClearAnswer</Button>
+            </div>
         </div>
     );
 }

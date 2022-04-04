@@ -25,7 +25,11 @@ export function OptionsList({
                     ></MulipleChoice>
                 )}
                 {type === "short_answer_question" && (
-                    <ShortAnswer expectedAnswer={expected}></ShortAnswer>
+                    <ShortAnswer
+                        options={options}
+                        expected={expected}
+                        points={points}
+                    ></ShortAnswer>
                 )}
             </Stack>
         </div>
