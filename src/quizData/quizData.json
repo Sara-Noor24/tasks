@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "title": "Quiz 1",
         "description": "A multiple choice quiz about math",
         "totalPoints": 0,
@@ -39,7 +38,6 @@
         ]
     },
     {
-        "id": 2,
         "title": "Quiz 2",
         "description": "A short answer quiz about English",
         "totalPoints": 0,
