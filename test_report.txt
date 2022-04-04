@@ -7,8 +7,11 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/quizzer/MutipleChoice.test.tsx
 PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
+PASS src/quizzer/ShortAnswer.test.tsx
+PASS src/quizzer/QuizList.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
 PASS src/form-components/CheckAnswer.test.tsx
@@ -21,23 +24,12 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
-FAIL src/quizzer/QuizList.test.tsx
-  ● Test suite failed to run
-
-    Your test suite must contain at least one test.
-
-      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
-      at node_modules/@jest/core/build/TestScheduler.js:316:17
-      at node_modules/emittery/index.js:260:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:258:23)
-
 PASS src/quizzer/Quizzer.test.tsx
 PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   95.12 |    88.04 |   92.46 |   94.98 |                   
+All files                    |   98.62 |    96.73 |   97.29 |   98.58 |                   
  src                         |   99.42 |    98.21 |   98.73 |    99.4 |                   
   App.tsx                    |     100 |      100 |     100 |     100 |                   
   ShowHideTasks.tsx          |   66.66 |       50 |      50 |   66.66 | 61                
@@ -67,32 +59,19 @@ All files                    |   95.12 |    88.04 |   92.46 |   94.98 |
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
   quiz.ts                    |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |   38.09 |       10 |   33.33 |   38.09 |                   
-  MultipleChoice.tsx         |       0 |        0 |       0 |       0 | 9-26              
-  OptionsList.tsx            |       0 |        0 |       0 |       0 | 17                
-  QuestionList.tsx           |       0 |      100 |       0 |       0 | 11-14             
-  QuestionView.tsx           |       0 |      100 |       0 |       0 | 10                
+ src/quizzer                 |    87.5 |       90 |   82.35 |    87.5 |                   
+  MultipleChoice.tsx         |   66.66 |       50 |      50 |   66.66 | 13-17             
+  OptionsList.tsx            |     100 |      100 |     100 |     100 |                   
+  QuestionList.tsx           |     100 |      100 |     100 |     100 |                   
+  QuestionView.tsx           |     100 |      100 |     100 |     100 |                   
   QuizList.tsx               |     100 |      100 |     100 |     100 |                   
-  QuizView.tsx               |   66.66 |       50 |      50 |   66.66 | 15                
+  QuizView.tsx               |     100 |      100 |     100 |     100 |                   
   Quizzer.tsx                |     100 |      100 |     100 |     100 |                   
-  ShortAnswer.tsx            |       0 |        0 |       0 |       0 | 12-17             
+  ShortAnswer.tsx            |      80 |      100 |   66.66 |      80 | 19                
 -----------------------------|---------|----------|---------|---------|-------------------
 
-Summary of all failing tests
-FAIL src/quizzer/QuizList.test.tsx
-  ● Test suite failed to run
-
-    Your test suite must contain at least one test.
-
-      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
-      at node_modules/@jest/core/build/TestScheduler.js:316:17
-      at node_modules/emittery/index.js:260:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:258:23)
-
-
-Test Suites: 1 failed, 21 passed, 22 total
-Tests:       135 passed, 135 total
+Test Suites: 24 passed, 24 total
+Tests:       144 passed, 144 total
 Snapshots:   0 total
-Time:        13.213 s
+Time:        14.478 s
 Ran all test suites.
